@@ -235,6 +235,61 @@ footer { background: var(--dark); color: var(--white); padding: 60px 8% 20px; }
         min-height: 300px; /* Foto di HP dibuat lebih tinggi agar jelas */
     }
 }
+/* Warna Emas Brand */
+:root {
+    --emas: #d4af37;
+}
 
+/* Sembunyikan garis tiga di tampilan Desktop */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.menu-toggle .bar {
+    width: 30px;
+    height: 3px;
+    background-color: var(--emas); /* Warna Kuning Emas */
+    border-radius: 2px;
+    transition: 0.4s;
+}
+
+/* Tampilan Mobile (Layar di bawah 768px) */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* Tampilkan garis tiga */
+        z-index: 1000;
+    }
+
+    .nav-links {
+        position: fixed;
+        right: -100%; /* Sembunyikan menu di kanan luar layar */
+        top: 0;
+        height: 100vh;
+        width: 70%;
+        background: rgba(17, 17, 17, 0.95); /* Hitam transparan mewah */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: 0.5s ease;
+    }
+
+    .nav-links.active {
+        right: 0; /* Munculkan menu saat tombol diklik */
+    }
+
+    /* Animasi Garis Tiga Menjadi Silang (X) */
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+}
 
 }

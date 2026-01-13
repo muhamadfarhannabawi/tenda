@@ -10,7 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- 2. LOGIKA NAVIGASI MOBILE (HAMBURGER MENU) ---
     const menu = document.querySelector('#mobile-menu');
-    const menuLinks = document.querySelector('.nav-links');
+const menuLinks = document.querySelector('.nav-links');
+
+menu.addEventListener('click', function() {
+    menu.classList.toggle('active');      // Animasi garis tiga jadi X
+    menuLinks.classList.toggle('active'); // Memunculkan menu samping
+});
 
     if (menu && menuLinks) {
         menu.addEventListener('click', () => {
