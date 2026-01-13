@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Karya | Tenda Mulia Exclusive</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --emas: #d4af37;
+            --gelap: #111111;
+            --krem: #fdfbf8;
+        }
+
+        body { background-color: var(--krem); color: var(--gelap); margin: 0; }
+
+        .gallery-header {
+            padding: 180px 8% 60px;
+            text-align: center;
+        }
+
+        .gallery-header span {
+            letter-spacing: 8px;
+            font-size: 10px;
+            color: var(--emas);
+            font-weight: 600;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .gallery-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin: 0;
+        }
+
+        .divider {
+            width: 40px;
+            height: 1px;
+            background: #ccc;
+            margin: 40px auto;
+        }
+
+        /* Masonry System yang Dioptimalkan untuk Banyak Foto */
+        .gallery-container {
+            padding: 0 8% 120px;
+            column-count: 3;
+            column-gap: 20px;
+        }
+
+        .gallery-item {
+            break-inside: avoid;
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+            background: #fff;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            display: block;
+            transition: transform 1.2s cubic-bezier(0.15, 0, 0.05, 1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(17, 17, 17, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: 0.6s;
+            backdrop-filter: blur(3px);
+        }
+
+        .gallery-item:hover .gallery-overlay { opacity: 1; }
+        .gallery-item:hover img { transform: scale(1.08); }
+
+        .overlay-text {
+            color: white;
+            text-align: center;
+            transform: translateY(20px);
+            transition: 0.6s;
+            padding: 20px;
+        }
+
+        .gallery-item:hover .overlay-text { transform: translateY(0); }
+
+        .overlay-text h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-style: italic;
+            margin: 0 0 5px 0;
+        }
+
+        .overlay-text p {
+            font-size: 8px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--emas);
+            margin: 0;
+        }
+
+        /* Responsive Settings */
+        @media (max-width: 1024px) { .gallery-container { column-count: 2; } }
+        @media (max-width: 600px) { 
+            .gallery-container { column-count: 1; } 
+            .gallery-header { padding: 120px 5% 40px; }
+        }
+    </style>
+</head>
+<body>
+    
+    <nav>
+        <div class="logo">TENDA<span>MULIA</span></div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="tentang.html">Tentang</a></li>
+            <li><a href="galeri.html" class="active">Galeri</a></li>
+            <li><a href="sewa.html">Sewa</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <header class="gallery-header">
+        <span>PORTOFOLIO</span>
+        <h1>Arsip Dokumentasi Proyek</h1>
+        <div class="divider"></div>
+        <p style="font-style: italic; color: #888; font-size: 0.95rem;">Momen-momen terbaik yang telah kami wujudkan.</p>
+    </header>
+
+    <section class="gallery-container">
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=600" alt="Proyek 1"><div class="gallery-overlay"><div class="overlay-text"><h4>Royal Ballroom</h4><p>Wedding Experience</p></div></div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1478145046317-39f10e56b5e9?w=600" alt="Proyek 2"><div class="gallery-overlay"><div class="overlay-text"><h4>Gala Corporate</h4><p>Roder Structure</p></div></div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=600" alt="Proyek 3"><div class="gallery-overlay"><div class="overlay-text"><h4>Garden Soiree</h4><p>Outdoor Luxury</p></div></div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=600" alt="Proyek 4"><div class="gallery-overlay"><div class="overlay-text"><h4>Exhibition Hall</h4><p>National Event</p></div></div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=600" alt="Proyek 5"><div class="gallery-overlay"><div class="overlay-text"><h4>Night Gala</h4><p>Lighting Concept</p></div></div></div>
+
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1502635385003-ee1e6a1a742d?w=600" alt="Proyek 6"><div class="gallery-overlay"><div class="overlay-text"><h4>Modern Tent</h4><p>Wedding Art</p></div></div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?w=600" alt="Proyek 7"><div class="gallery-overlay"><div class="overlay-text"><h4>VIP Lounge</h4><p>Exclusive Setup</p></div></div></div>
+        <div class="gallery-item"><img src="c:\Users\User\OneDrive\Pictures\fkp_9845.jpg" alt="Proyek 8"><div class="gallery-overlay"><div class="overlay-text"><h4>Cultural Fest</h4><p>Thematic Tent</p></div></div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1510076857177-7470076d4098?w=600" alt="Proyek 9"><div class="gallery-overlay"><div class="overlay-text"><h4>Classic White</h4><p>Purity Theme</p></div></div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=600" alt="Proyek 10"><div class="gallery-overlay"><div class="overlay-text"><h4>Grand Stage</h4><p>Main Infrastructure</p></div></div></div>
+
+        <div class="gallery-item"><img src="c:\Users\User\Downloads\6476539c-0f07-469d-a27f-9b88d18b7625.jpg" alt="Proyek 11"><div class="gallery-overlay"><div class="overlay-text"><h4>Farhan</h4><p>Tangerang</p></div></div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1482731215275-a1f151646268?w=600" alt="Proyek 12"><div class="gallery-overlay"><div class="overlay-text"><h4>Intimate Party</h4><p>Soft Decoration</p></div></div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=600" alt="Proyek 13"><div class="gallery-overlay"><div class="overlay-text"><h4>Premium Drapery</h4><p>Ceiling Art</p></div></div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600" alt="Proyek 14"><div class="gallery-overlay"><div class="overlay-text"><h4>Festival Tent</h4><p>Strategic Design</p></div></div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=600" alt="Proyek 15"><div class="gallery-overlay"><div class="overlay-text"><h4>Evening Reception</h4><p>Glow & Gold</p></div></div></div>
+
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1515169067868-5387ec356754?w=600" alt="Proyek 16"><div class="gallery-overlay"><div class="overlay-text"><h4>Summit Meeting</h4><p>State Level</p></div></div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?w=600" alt="Proyek 17"><div class="gallery-overlay"><div class="overlay-text"><h4>Bespoke Design</h4><p>Custom Order</p></div></div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=600" alt="Proyek 18"><div class="gallery-overlay"><div class="overlay-text"><h4>Transparency</h4><p>Clear Tent</p></div></div></div>
+        <div class="gallery-item"><img src="c:\Users\User\OneDrive\Pictures\6460354.jpg" alt="Proyek 19"><div class="gallery-overlay"><div class="overlay-text"><h4>MSN</h4><p>Messi Suarez Neymar</p></div></div></div>
+        <div class="gallery-item"><img src="c:\Users\User\OneDrive\Pictures\soccer-fc-barcelona-logo-wallpaper-thumb.jpg" alt="Proyek 20"><div class="gallery-overlay"><div class="overlay-text"><h4>Barca</h4><p>Jago Banget</p></div></div></div>
+    </section>
+    <a href="https://wa.me/628811205935" class="floating-wa" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        <span>Chat Kami</span>
+    </a>
+
+    <footer style="background: var(--gelap); color: #666; padding: 100px 8%; text-align: center;">
+        <div class="logo" style="margin-bottom: 30px; filter: invert(1);">TENDA<span>MULIA</span></div>
+        <p style="font-size: 11px; letter-spacing: 5px; margin-bottom: 25px;">TANGERANG • JAKARTA • BANTEN</p>
+        <p style="font-size: 10px; opacity: 0.5;">© 2026 TENDA MULIA — PREMIUM SERVICES.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

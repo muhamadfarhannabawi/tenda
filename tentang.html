@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Story of Tenda Mulia | Excellence Since 2010</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Tambahan Khusus Halaman Tentang (Inline agar tidak merusak style.css utama) */
+        .split-section {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 100px 8%;
+            gap: 50px;
+        }
+        .split-image {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+        }
+        .split-image img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            filter: grayscale(20%);
+        }
+        .floating-card {
+            position: absolute;
+            bottom: -30px;
+            right: -30px;
+            background: #d4af37;
+            color: white;
+            padding: 40px;
+            max-width: 250px;
+        }
+        .split-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        .luxury-quote {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-style: italic;
+            line-height: 1.4;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        .luxury-quote::before {
+            content: '"';
+            position: absolute;
+            top: -40px;
+            left: -20px;
+            font-size: 5rem;
+            color: #d4af37;
+            opacity: 0.3;
+        }
+        @media (max-width: 768px) {
+            .split-image img { height: 400px; }
+            .floating-card { position: static; margin-top: 20px; max-width: 100%; }
+            .hero-title { font-size: 2.5rem !important; }
+        }
+    </style>
+</head>
+<body>
+    
+    <nav>
+        <div class="logo">TENDA<span>MULIA</span></div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tentang.html" class="active">Tentang</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="sewa.html">Sewa</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <header style="background: #fdfbf8; padding: 150px 8% 100px;">
+        <span style="color: #d4af37; letter-spacing: 5px; font-weight: 600; font-size: 12px;">DISCOVER OUR ESSENCE</span>
+        <h1 class="hero-title" style="font-family: 'Playfair Display', serif; font-size: 4.5rem; line-height: 1.1; margin: 20px 0;">Menciptakan Ruang,<br>Mengukir Kenangan.</h1>
+    </header>
+
+    <section class="split-section">
+        <div class="split-image">
+            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1000" alt="Luxury Setup">
+            <div class="floating-card">
+                <h3 style="font-size: 3rem; font-family: 'Playfair Display', serif;">14</h3>
+                <p style="font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase;">Tahun Pengalaman Tanpa Kompromi</p>
+            </div>
+        </div>
+        <div class="split-text">
+            <h2 class="luxury-quote">"Kualitas bukanlah sebuah aksi, melainkan sebuah kebiasaan yang kami jaga sejak tahun 2010."</h2>
+            <p style="color: #666; margin-bottom: 20px;">Berawal dari sebuah bengkel tenda kecil di Sepatan, Tenda Mulia tumbuh menjadi simbol kemewahan untuk acara-acara prestisius di Tangerang dan sekitarnya.</p>
+            <p style="color: #666;">Kami tidak hanya menyewakan besi dan kain. Kami menyewakan ketenangan pikiran. Setiap detail, mulai dari kebersihan kain hingga presisi pemasangan, adalah prioritas utama kami.</p>
+        </div>
+    </section>
+
+    
+    <section style="background: #1a1a1a; color: white; padding: 100px 8%;">
+        <div style="max-width: 800px;">
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 3rem; color: #d4af37; margin-bottom: 30px;">Visi Kami</h2>
+            <p style="font-size: 1.5rem; line-height: 1.6; font-weight: 300;">Menjadi partner eksklusif dalam setiap perayaan hidup, dengan menghadirkan infrastruktur acara yang memadukan keamanan struktur dan estetika seni tingkat tinggi.</p>
+        </div>
+    </section>
+
+    <section style="padding: 100px 8%;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 80px;">
+            <div style="border-left: 1px solid #d4af37; padding-left: 30px;">
+                <h4 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 15px;">Integritas</h4>
+                <p style="color: #777; font-size: 0.9rem;">Kejujuran dalam setiap transaksi dan ketepatan waktu dalam setiap instalasi.</p>
+            </div>
+            <div style="border-left: 1px solid #d4af37; padding-left: 30px;">
+                <h4 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 15px;">Inovasi</h4>
+                <p style="color: #777; font-size: 0.9rem;">Terus memperbarui koleksi tenda dan dekorasi mengikuti tren global terbaru.</p>
+            </div>
+            <div style="border-left: 1px solid #d4af37; padding-left: 30px;">
+                <h4 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 15px;">Profesionalisme</h4>
+                <p style="color: #777; font-size: 0.9rem;">Kru terlatih dengan seragam rapi dan etika kerja yang santun di lokasi acara.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background: #fff; padding: 80px 8%; text-align: center; border-top: 1px solid #eee;">
+        <div class="logo" style="margin-bottom: 20px;">TENDA<span>MULIA</span></div>
+        <p style="font-size: 0.8rem; color: #aaa; letter-spacing: 2px;">JAKARTA • TANGERANG • BANTEN</p>
+        <div style="margin-top: 30px;">
+            <a href="kontak.html" class="btn" style="background: #1a1a1a; padding: 15px 40px;">Mulai Konsultasi</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <a href="https://wa.me/628811205935" class="floating-wa" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        <span>Chat Kami</span>
+    </a>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koleksi Layanan | Tenda Mulia</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Poppins:wght@200;300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --emas: #d4af37;
+            --gelap: #111111;
+            --krem: #fdfbf8;
+        }
+
+        body { background-color: var(--krem); color: var(--gelap); overflow-x: hidden; font-family: 'Poppins', sans-serif; }
+
+        /* Header Elegan */
+        .header-premium {
+            padding: 150px 8% 80px;
+            text-align: center;
+        }
+        .judul-animasi {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            line-height: 1.2;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: munculKeAtas 1s forwards;
+        }
+        @keyframes munculKeAtas { to { opacity: 1; transform: translateY(0); } }
+
+        /* Grid Paket Layanan */
+        .section-sewa { padding: 0 8% 100px; }
+        .grid-layanan {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+        }
+
+        /* Kartu Mewah */
+        .kartu-mewah {
+            background: #ffffff;
+            border: 1px solid rgba(0,0,0,0.03);
+            padding: 70px 45px;
+            position: relative;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .kartu-mewah:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 40px 70px rgba(0,0,0,0.05);
+            border-color: var(--emas);
+        }
+
+        .label-kategori {
+            font-size: 10px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: var(--emas);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .nama-paket {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .harga-mulai {
+            font-size: 0.9rem;
+            color: #999;
+            letter-spacing: 1px;
+            margin-bottom: 40px;
+        }
+
+        .list-fitur {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            flex-grow: 1;
+        }
+
+        .item-fitur {
+            font-size: 0.95rem;
+            color: #666;
+            margin: 15px 0;
+            font-weight: 300;
+            opacity: 0.8;
+        }
+
+        /* Tombol High-End */
+        .btn-premium {
+            margin-top: 50px;
+            background: var(--gelap);
+            color: white;
+            padding: 20px 40px;
+            border: none;
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.4s;
+            width: 100%;
+        }
+
+        .btn-premium:hover {
+            background: var(--emas);
+            letter-spacing: 4px;
+        }
+
+        .badge-populer {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 9px;
+            background: var(--emas);
+            color: white;
+            padding: 4px 12px;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        /* Section Kustom */
+        .banner-kustom {
+            background: var(--gelap);
+            color: white;
+            padding: 120px 8%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav>
+        <div class="logo">TENDA<span>MULIA</span></div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="tentang.html">Tentang</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="sewa.html" class="active">Sewa</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <header class="header-premium">
+        <span style="letter-spacing: 6px; font-size: 10px; color: var(--emas); font-weight: 600;">KATALOG EKSKLUSIF</span>
+        <h1 class="judul-animasi">Kemewahan dalam<br>Setiap Detail Perayaan.</h1>
+        <p style="font-style: italic; color: #888; font-family: 'Playfair Display', serif;">Hanya kualitas terbaik untuk momen yang tak terlupakan.</p>
+    </header>
+
+    <section class="section-sewa">
+        <div class="grid-layanan">
+            
+            <div class="kartu-mewah">
+                <span class="label-kategori">Elegansi Klasik</span>
+                <h3 class="nama-paket">Silver</h3>
+                <span class="harga-mulai">Mulai dari IDR 5.000.000</span>
+                <div style="height: 1px; width: 40px; background: #504646; margin-bottom: 30px;"></div>
+                <ul class="list-fitur">
+                    <li class="item-fitur">Tenda Dekorasi Premium (50m²)</li>
+                    <li class="item-fitur">50 Kursi Futura & Cover Eksklusif</li>
+                    <li class="item-fitur">Panggung Utama Estetik</li>
+                    <li class="item-fitur">Pencahayaan Ruang Standar</li>
+                    <li class="item-fitur">Sistem Pendingin Blower (2 Unit)</li>
+                </ul>
+                <button class="btn-premium" onclick="handleBooking('Paket Silver')">Pesan Layanan</button>
+            </div>
+
+            <div class="kartu-mewah">
+                <div class="badge-populer">TERFAVORIT</div>
+                <span class="label-kategori">Kemewahan Modern</span>
+                <h3 class="nama-paket">Gold</h3>
+                <span class="harga-mulai">Mulai dari IDR 10.000.000</span>
+                <div style="height: 1px; width: 40px; background: #eee; margin-bottom: 30px;"></div>
+                <ul class="list-fitur">
+                    <li class="item-fitur">Tenda Dekorasi Signature (100m²)</li>
+                    <li class="item-fitur">100 Kursi Futura & Pita Dekoratif</li>
+                    <li class="item-fitur">Backdrop & Panggung Megah</li>
+                    <li class="item-fitur">Karpet Seluruh Area Event</li>
+                    <li class="item-fitur">Sistem Pendingin AC 5PK</li>
+                    <li class="item-fitur">Sistem Suara Terintegrasi</li>
+                </ul>
+                <button class="btn-premium" style="background: var(--emas);" onclick="handleBooking('Paket Gold')">Pesan Layanan</button>
+            </div>
+
+            <div class="kartu-mewah">
+                <span class="label-kategori">Mahakarya Kustom</span>
+                <h3 class="nama-paket">Platinum</h3>
+                <span class="harga-mulai">Harga Sesuai Kebutuhan</span>
+                <div style="height: 1px; width: 40px; background: #eee; margin-bottom: 30px;"></div>
+                <ul class="list-fitur">
+                    <li class="item-fitur">Struktur Tenda Roder / Transparan</li>
+                    <li class="item-fitur">Area Lounge VIP & Dekorasi Prasmanan</li>
+                    <li class="item-fitur">Dekorasi Flora Seni Tinggi</li>
+                    <li class="item-fitur">Pencahayaan Efek Sinematik</li>
+                    <li class="item-fitur">Konsultasi Desain Arsitektur 3D</li>
+                </ul>
+                <button class="btn-premium" onclick="handleBooking('Paket Platinum')">Hubungi Pakar</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="banner-kustom">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 2.8rem; margin-bottom: 25px;">Wujudkan Visi Anda.</h2>
+        <p style="max-width: 650px; margin: 0 auto 50px; font-weight: 300; line-height: 1.8; opacity: 0.8;">
+            Beberapa momen terlalu berharga untuk sekadar paket standar. Tim kami siap merancang infrastruktur acara yang sepenuhnya disesuaikan dengan imajinasi Anda.
+        </p>
+        <a href="kontak.html" style="color: var(--emas); text-decoration: none; letter-spacing: 4px; font-size: 11px; font-weight: 600; border-bottom: 1px solid var(--emas); padding-bottom: 5px;">KONSULTASI DESAIN KUSTOM →</a>
+    </section>
+    <a href="https://wa.me/628811205935" class="floating-wa" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        <span>Chat Kami</span>
+    </a>
+
+    <footer style="background: #000; color: #555; padding: 100px 8%; text-align: center;">
+        <div class="logo" style="margin-bottom: 40px; filter: invert(1); opacity: 0.8;">TENDA<span>MULIA</span></div>
+        <p style="font-size: 9px; letter-spacing: 5px; margin-bottom: 20px; color: #888;">TANGERANG • JAKARTA • BANTEN</p>
+        <div style="width: 20px; height: 1px; background: #333; margin: 0 auto 20px;"></div>
+        <p style="font-size: 10px; opacity: 0.5;">© 2026 TENDA MULIA — SOLUSI INFRASTRUKTUR ACARA PREMIUM.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

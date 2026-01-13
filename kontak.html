@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak Kami - Tenda Mulia Premium</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <nav>
+        <div class="logo">Tenda<span>Mulia</span></div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tentang.html">Tentang</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="sewa.html">Sewa</a></li>
+            <li><a href="kontak.html" class="active">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <section class="contact-header" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=1500'); background-size: cover; background-position: center; color: white; padding: 100px 20px; text-align: center;">
+        <h1 style="font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 15px;">Hubungi Kami</h1>
+        <p style="max-width: 600px; margin: 0 auto; opacity: 0.9; font-weight: 300;">Wujudkan acara impian Anda dengan layanan tenda premium terbaik di Tangerang.</p>
+    </section>
+
+    <section class="contact-container" style="max-width: 1200px; margin: -50px auto 50px; padding: 0 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
+        
+        <div class="contact-info" style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 15px 50px rgba(0,0,0,0.1); border-top: 5px solid #d4af37;">
+            <h2 style="font-family: 'Playfair Display', serif; margin-bottom: 30px; color: #1a1a1a;">Informasi Atelier</h2>
+            
+            <div class="info-box" style="margin-bottom: 25px;">
+                <h4 style="color: #d4af37; margin-bottom: 5px; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Lokasi Workshop</h4>
+                <p style="color: #555;">📍 Kp. Baru tari kolot Rt.001/003, kec. sepatan, kab.tangerang banten</p>
+            </div>
+
+            <div class="info-box" style="margin-bottom: 25px;">
+                <h4 style="color: #d4af37; margin-bottom: 5px; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">E-mail Resmi</h4>
+                <p style="color: #555;">📧 nabawifarhan646@gmail.com</p>
+            </div>
+
+            <div class="info-box" style="margin-bottom: 30px;">
+                <h4 style="color: #d4af37; margin-bottom: 5px; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Jam Operasional</h4>
+                <p style="color: #555;">⏰ Setiap Hari: 08.00 - 20.00 WIB</p>
+            </div>
+
+            <div class="map-wrapper" style="border-radius: 15px; overflow: hidden; position: relative;">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15869.072237077965!2d106.5744473!3d-6.0945821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a00311f993d0b%3A0xc39f9973801f93e3!2sSepatan%2C%20Tangerang%20Regency%2C%20Banten!5e0!3m2!1sen!2sid!4v1705140000000!5m2!1sen!2sid" 
+                    width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+                <a href="https://maps.app.goo.gl/NhnwKMedUBnYECN16" target="_blank" 
+                   style="display: block; background: #1a1a1a; color: white; text-align: center; padding: 12px; text-decoration: none; font-size: 13px; font-weight: bold;">
+                   📍 PETUNJUK ARAH KE LOKASI
+                </a>
+            </div>
+        </div>
+
+        <div class="contact-form-wrap" style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 15px 50px rgba(0,0,0,0.1);">
+            <h2 style="font-family: 'Playfair Display', serif; margin-bottom: 10px; color: #1a1a1a;">Kirim Pesan</h2>
+            <p style="font-size: 14px; color: #777; margin-bottom: 30px;">Tim kami akan merespons melalui WhatsApp secepat mungkin.</p>
+            
+            <form id="contactForm" class="elegant-form">
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; font-size: 12px; font-weight: 600; margin-bottom: 8px; color: #d4af37;">NAMA ANDA</label>
+                    <input type="text" placeholder="Masukkan nama lengkap" id="nama" required 
+                           style="width: 100%; padding: 15px; border: 1px solid #eee; border-radius: 10px; background: #f9f9f9; outline: none; font-family: 'Poppins', sans-serif;">
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; font-size: 12px; font-weight: 600; margin-bottom: 8px; color: #d4af37;">NOMOR WHATSAPP</label>
+                    <input type="tel" placeholder="Contoh: 0812345678" id="wa_number" required 
+                           style="width: 100%; padding: 15px; border: 1px solid #eee; border-radius: 10px; background: #f9f9f9; outline: none; font-family: 'Poppins', sans-serif;">
+                </div>
+
+                <div style="margin-bottom: 30px;">
+                    <label style="display: block; font-size: 12px; font-weight: 600; margin-bottom: 8px; color: #d4af37;">DETAIL PERTANYAAN</label>
+                    <textarea placeholder="Tuliskan tanggal acara, lokasi, dan paket yang diminati..." id="pesan" rows="4" required 
+                              style="width: 100%; padding: 15px; border: 1px solid #eee; border-radius: 10px; background: #f9f9f9; outline: none; font-family: 'Poppins', sans-serif; resize: none;"></textarea>
+                </div>
+
+                <button type="submit" class="btn-wa-submit" style="width: 100%; padding: 18px; background: #25D366; color: white; border: none; border-radius: 10px; font-weight: bold; font-size: 16px; cursor: pointer; transition: 0.3s; box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);">
+                   Kirim ke WhatsApp ➔
+                </button>
+            </form>
+        </div>
+
+    </section>
+
+    <a href="https://wa.me/628811205935" class="floating-wa" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        <span>Chat Kami</span>
+    </a>
+
+    <footer style="text-align: center; padding: 40px; background: #1a1a1a; color: #777; font-size: 13px;">
+        <p>© 2026 TENDA MULIA PREMIUM SERVICE. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
