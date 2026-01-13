@@ -265,15 +265,29 @@ footer { background: var(--dark); color: var(--white); padding: 60px 8% 20px; }
 
     .nav-links {
         position: fixed;
-        right: -100%; /* Sembunyikan menu di kanan luar layar */
+        right: -100%; 
         top: 0;
         height: 100vh;
         width: 70%;
-        background: rgba(17, 17, 17, 0.95); /* Hitam transparan mewah */
+        /* Warna Background: Hitam Elegan (Charcoal) agar serasi dengan Emas */
+        background: rgba(18, 18, 18, 0.98); 
         flex-direction: column;
         align-items: center;
         justify-content: center;
         transition: 0.5s ease;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+    }
+
+    /* Pastikan link di dalam menu mobile berwarna putih agar kontras */
+    .nav-links li a {
+        color: #ffffff;
+        font-size: 1.3rem;
+        margin: 15px 0;
+    }
+
+    /* Warna saat menu aktif atau dihover tetap emas */
+    .nav-links li a:hover {
+        color: var(--gold);
     }
 
     .nav-links.active {
